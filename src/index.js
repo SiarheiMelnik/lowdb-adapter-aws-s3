@@ -5,7 +5,7 @@ const stringify = obj => {
 }
 
 const writeObject = (aws, params) => {
-    return new Promise(async (resolve, reject) => {
+    return new Promise((resolve, reject) => {
         aws.putObject(params, err => err ? reject(err): resolve())
     })
 }
